@@ -34,7 +34,7 @@ def parse_args(argv=None):
     p.add_argument("-u", "--url", required=True, help="Target host, e.g. sitedacli.com")
     p.add_argument("-w", "--wordlist", required=True, help="Path to the wordlist file.")
     p.add_argument("-a", "--user-agents", required=True, help="Path to the UA file.")
-    p.add_argument("-t", "--threads", type=int, default=10,
+    p.add_argument("-t", "--threads", type=int, default=1,
                    help="Workers for BOTH proxy validation and the target.")
     p.add_argument("-d", "--delay", type=float, nargs="+", default=[0.3, 1.0],
                    metavar=("MIN", "MAX"),

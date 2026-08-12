@@ -6,6 +6,13 @@ and, whenever it hits the Vercel firewall challenge (a 403 with
 user-agent, solve the challenge with a stealth browser (Camoufox), and switch
 proxy — each worker uses its own validated proxy.
 
+## Requires Polishing
+
+This project still needs polishing. For now I'd recommend running it at a really
+low rate (that's why the default is a single thread) — this mostly just keeps the
+fuzzing going without stopping while you're asleep, rather than being a fast,
+production-ready tool.
+
 ## ⚠️ Disclaimer
 
 This tool is intended **for educational purposes and authorized security testing
@@ -52,7 +59,7 @@ Arguments:
 | `-u`, `--url` | Target host (e.g. `example.com`) | required |
 | `-w`, `--wordlist` | Path to the wordlist | required |
 | `-a`, `--user-agents` | Path to the user-agent list | required |
-| `-t`, `--threads` | Number of workers (used for both proxy validation and the target) | `10` |
+| `-t`, `--threads` | Number of workers (used for both proxy validation and the target) | `1` |
 | `-d`, `--delay` | Seconds between requests: one value (fixed) or two (random range) | `0.3 1.0` |
 | `-v`, `--verbose` | Show every request and internal step (disables the progress bar) | off |
 
